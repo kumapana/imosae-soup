@@ -6,9 +6,9 @@ def main():
     url = "http://imotosae.com/news/"
     req = request.Request(url)
     res = request.urlopen(req)
-    print(res)
     html = res.read()
     soup = BS(html, "lxml")
+    print(soup)
     topics = soup.find_all('h1', 'c-thumb-index__title')
     for i in range(len(topics)):
         print(topics[i].string, "\n")
