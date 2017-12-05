@@ -2,6 +2,7 @@ from urllib import request
 from bs4 import BeautifulSoup as BS
 
 
+
 def main():
     url = "http://imotosae.com/news/"
     req = request.Request(url)
