@@ -9,7 +9,6 @@ def main():
     res = request.urlopen(req)
     html = res.read()
     soup = BS(html, "lxml")
-    print(soup)
     topics = soup.find_all('h1', 'c-thumb-index__title')
     for i in range(len(topics)):
         print(topics[i].string, "\n")
